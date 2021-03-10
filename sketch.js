@@ -61,7 +61,31 @@ function desenhar_processo(i, j, indice_do_processo){
 
 function desenhar_processos(){
 
-	// FIFO
+	// SJF
+var arrayprocessos = [
+    {
+        "tempo": 120
+    },
+    {
+        "tempo": 90
+    },
+    {
+        "tempo": 30
+    },
+    {
+        "tempo": 30
+    },
+    {
+        "tempo": 300
+    },
+    {
+        "tempo": 30
+    }
+];
+
+arrayprocessos.sort(function(a, b) {
+    return a.tempo > b.tempo;
+});
 
 	// Indice do processo
 	let indice = 0
